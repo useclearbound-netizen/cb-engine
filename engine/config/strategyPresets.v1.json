@@ -1,0 +1,57 @@
+{
+  "version": "v1",
+  "presets": {
+    "low": {
+      "tone_ceiling": "soft",
+      "disclosure_level": "selective",
+      "documentation_sensitivity": "low",
+      "structure_mode": "single_shot",
+      "relationship_priority": "maintain",
+      "cta_intensity": "low",
+      "guardrails": {
+        "avoid_admissions": false,
+        "avoid_absolute_claims": true,
+        "require_ambiguity_buffer": false
+      }
+    },
+    "medium": {
+      "tone_ceiling": "neutral",
+      "disclosure_level": "selective",
+      "documentation_sensitivity": "medium",
+      "structure_mode": "structured",
+      "relationship_priority": "maintain",
+      "cta_intensity": "medium",
+      "guardrails": {
+        "avoid_admissions": true,
+        "avoid_absolute_claims": true,
+        "require_ambiguity_buffer": true
+      }
+    },
+    "high": {
+      "tone_ceiling": "firm",
+      "disclosure_level": "minimal",
+      "documentation_sensitivity": "high",
+      "structure_mode": "formal_email",
+      "relationship_priority": "boundary",
+      "cta_intensity": "medium",
+      "guardrails": {
+        "avoid_admissions": true,
+        "avoid_absolute_claims": true,
+        "require_ambiguity_buffer": true
+      }
+    },
+    "extreme": {
+      "tone_ceiling": "firm",
+      "disclosure_level": "minimal",
+      "documentation_sensitivity": "legal_hold",
+      "structure_mode": "record_style",
+      "relationship_priority": "exit",
+      "cta_intensity": "low",
+      "guardrails": {
+        "avoid_admissions": true,
+        "avoid_absolute_claims": true,
+        "require_ambiguity_buffer": true
+      }
+    }
+  }
+}
