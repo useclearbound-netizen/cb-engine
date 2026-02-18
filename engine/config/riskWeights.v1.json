@@ -1,0 +1,11 @@
+{
+  "version": "v1",
+  "mode_weights": {
+    "documentation_backfire": 0.26,
+    "escalation": 0.22,
+    "misinterpretation": 0.20,
+    "admission": 0.18,
+    "relationship_break": 0.14
+  },
+  "sum": 1.0
+}
