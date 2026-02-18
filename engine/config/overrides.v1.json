@@ -1,0 +1,29 @@
+{
+  "version": "v1",
+  "strategy_overrides": [
+    {
+      "if_input_gte": { "exposure.legal_exposure": 0.8 },
+      "force": {
+        "documentation_sensitivity": "legal_hold",
+        "disclosure_level": "minimal",
+        "structure_mode": "record_style",
+        "guardrails.avoid_admissions": true,
+        "guardrails.require_ambiguity_buffer": true
+      }
+    },
+    {
+      "if_mode_gte": { "admission": 0.7 },
+      "force": {
+        "documentation_sensitivity": "legal_hold",
+        "disclosure_level": "minimal",
+        "structure_mode": "record_style",
+        "guardrails.avoid_admissions": true,
+        "guardrails.require_ambiguity_buffer": true
+      }
+    },
+    {
+      "if_input_gte": { "exposure.audience_spillover": 0.75 },
+      "multiply_mode": { "documentation_backfire": 1.2 }
+    }
+  ]
+}
