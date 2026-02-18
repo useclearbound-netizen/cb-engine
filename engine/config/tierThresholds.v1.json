@@ -1,0 +1,21 @@
+{
+  "version": "v1",
+  "scale": "0-100",
+  "thresholds": {
+    "low_max": 24,
+    "medium_max": 49,
+    "high_max": 74,
+    "extreme_max": 100
+  },
+  "tier_by_score": [
+    { "tier": "low", "min": 0, "max": 24 },
+    { "tier": "medium", "min": 25, "max": 49 },
+    { "tier": "high", "min": 50, "max": 74 },
+    { "tier": "extreme", "min": 75, "max": 100 }
+  ],
+  "tier_overrides": [
+    { "if_mode_gte": { "admission": 0.85 }, "force_tier": "extreme" },
+    { "if_mode_gte": { "documentation_backfire": 0.85 }, "force_tier": "extreme" },
+    { "if_input_gte": { "exposure.legal_exposure": 0.8 }, "force_tier": "high" }
+  ]
+}
